@@ -25,9 +25,11 @@
                   name="course_id"
                   value="<%= course._id %>"
                 />
+                <% if(user.role=="student"){ %>
                 <button class="btn btn-lg btn-warning text-white">
                   <span>Enroll</span>
                 </button>
+                <% } %>
               </form>
             </div>
             <% } %>
