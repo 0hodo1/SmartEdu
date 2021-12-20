@@ -17,7 +17,7 @@ const app = express();
 // Connect DB
 mongoose
   .connect(
-    "mongodb+srv://hodo:ZQepiOcXJkOOuezC@cluster0.jjoh0.mongodb.net/smartedu-db?retryWrites=true&w=majority",
+    "mongodb+srv://hodo:F8FCdWu84Lam_ve@cluster0.2wmxu.mongodb.net/smartedu-db?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -46,7 +46,8 @@ app.use(
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({
-      mongoUrl: "mongodb://127.0.0.1:27017/smartedu-db",
+      mongoUrl:
+        "mongodb+srv://hodo:F8FCdWu84Lam_ve@cluster0.2wmxu.mongodb.net/smartedu-db?retryWrites=true&w=majority",
     }),
   })
 );
