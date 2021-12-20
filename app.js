@@ -25,6 +25,9 @@ mongoose
   )
   .then(() => {
     console.log("DB connected successfully");
+  })
+  .catch((err) => {
+    console.log(err);
   });
 
 // template engine
