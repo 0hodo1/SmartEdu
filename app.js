@@ -15,10 +15,17 @@ const userRoute = require("./routes/userRoute");
 const app = express();
 
 // Connect DB
-mongoose.connect("mongodb://127.0.0.1:27017/smartedu-db", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect(
+    "mongodb+srv://hodo:F8FCdWu84Lam_ve@cluster0.jjoh0.mongodb.net/smartedu-db?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log("DB connected successfully");
+  });
 
 // template engine
 app.set("view engine", "ejs");
