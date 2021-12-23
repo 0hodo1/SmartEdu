@@ -352,15 +352,23 @@
 
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-2">
               <h2>Categories</h2>
               <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">#ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Add</th>
                     <th scope="col">Delete</th>
+                    <th scope="col">              
+                      <button
+                        class="btn btn-primary rounded-0 text-white"
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#addCategory"
+                      >
+                        <span>Category Add</span>
+                      </button></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -368,16 +376,8 @@
                     <tr>
                       <th scope="row"><%= categories[i]._id %></th>
                       <td><%= categories[i].name %></td>
-                      <td>
-                        <button
-                          class="btn btn-primary rounded-0 text-white"
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#addCategory"
-                        >
-                          <span>Add</span>
-                        </button></a></td>
                       <td><a href="/categories/<%= categories[i]._id %>?_method=DELETE" onclick="return confirm('Are you sure?')" class="btn btn-danger rounded-0 text-white"><span>Delete</span></a></td>
+                      <td></td>
                     </tr>
                   <% } %>
                 </tbody>
